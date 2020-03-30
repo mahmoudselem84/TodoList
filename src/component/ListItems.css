@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body{
+    background-color:blueviolet;
+
+}
+.container{
+    display:flex;
+    width:100 vw;
+flex-direction: column;
+}
+.head{
+    background-color:burlywood  !important ;
+}
+.table{
+    border-radius:20px;
+    width:617px;
+    height: 160px;
+    overflow:auto;
+color:goldenrod;
+font-size:larger;
+margin-left: auto;
+margin-right: auto;
+}
+h1{
+    color:#fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+button{
+    display: block;
+}
+.item-row{
+    background-color:white;
+    display:flex;
+    width:600px;
+    height: 40px;
+    border:1px solid gray;
+    text-align: center;
+}
+.name-cell{
+    width:300px;
+    border-left:1px solid gray;
+}
+.age-cell{
+    width:200px;
+    border-left:1px solid gray;
+}
+.action-cell{
+    width:100px;
+    border-left:1px solid gray;
+    cursor: pointer;
+    background-color:whitesmoke;
+}
+input{
+    display: block;
+}
+::placeholder {
+    color:gray;
+  }
+  .info{
+    display: block;
+      margin: 0;
+     text-align: center;
+      color:red;
+      border: solid;
+   
+  }
+
