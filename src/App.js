@@ -1,10 +1,14 @@
 import React from 'react';
 import ListItems from './component/ListItems';
 import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 function App() {
-  return (
-  <ListItems />
+  return (<Provider store={store}>
+    <ListItems />
+  </Provider>
+  
   );
 }
 

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import ListItem from "./ListItem";
 import "./ListItems.css";
+import { addItem } from "../redux/actionCreater";
+import { connect } from "react-redux";
 class ListItems extends Component {
   state = {
     items: [
@@ -39,8 +41,9 @@ class ListItems extends Component {
   render() {
     return (
         <div className='container'>
-        <h1>todo app</h1>
-        <div className="table">
+        <h1>todo app {this.props.item}</h1>
+        <button onClick={this.props.add}>chage</button>
+                  <div className="table">
           <div className="item-row">
             <p className='name-cell head'>name</p>
             <p className='age-cell head'>age</p>
@@ -60,11 +63,21 @@ class ListItems extends Component {
                         className='action-cell'
                     />
                 </form>
-                
+        
         </div>
       </div>
     );
   }
 }
-
-export default ListItems;
+const mapStateToProps = (state) => {
+  return {
+    item:state
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    add: () => {
+      dispatch(addItem())}
+  }
+}
+export default connect(mapStateToProps,mapDispatchToProps) (ListItems);
